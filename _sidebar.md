@@ -3,6 +3,7 @@
 * [Web](/Web.md)
   * [Атаки на сервер](/Web/Server.md)
   * [Атаки на пользователя](/Web/User.md)
+    * [IDOR](/Web/User/IDOR.md)
 * [Форензика](/Forensics.md)
 * [Reverse Engineering](/Reverse.md)
 * [Криптография](/Crypto.md)
