@@ -18,14 +18,33 @@
 				homepage: 'Home.md',
 				auto2top: true,
 				latex: {
-					inlineMath: [['$', '$'], ['\\(', '\\)']], // default
-					displayMath: [['$$', '$$']], // default
+					// Символы, которые начинают элемент LaTeX, встроенный в строку
+					inlineMath: [['$', '$'], ['\\(', '\\)']],
+					// Символы, которые начинают отдельный элемент LaTeX
+					displayMath: [['$$', '$$']]
+				},
+				maxLevel: 4,
+				subMaxLevel: 2,
+				search: {
+					maxAge: 86400000, // Expiration time, the default one day
+					paths: 'auto',
+					placeholder: 'Пишите здесь для поиска...',
+					// Строка, которая отображается, когда не удалось найти результаты
+					noData: 'Результаты не найдены!',
+					// Глубина заголовков для поиска
+					depth: 6,
+					// Сворачивать основное содержимое сайдбара во время поиска
+					hideOtherSidebarContent: true, 
 				}
 			}
 		</script>
 		<!-- Docsify v4 -->
 		<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-
+		<!-- Плагин для поиска по документации -->
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+		<!-- Плагин для возможности сворачивать элементы в сайдбаре -->
+		<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+		<!-- Плагин для интеграции LaTeX -->
 		<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
 		<script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
